@@ -48,7 +48,7 @@
     <Compile Include="SHA256.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\openCL.NET\openCL.NET\openCL.NET.csproj">
+    <ProjectReference Include="..\openCL.NET\openCL.NET.csproj">
       <Project>{FAE2D3B6-9081-4E90-ADA8-682DFE2300A5}</Project>
       <Name>openCL.NET</Name>
     </ProjectReference>
