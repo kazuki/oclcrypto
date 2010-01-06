@@ -30,7 +30,7 @@ __kernel void core256
 	for (uint i = 0; i < blocks; i ++) {
 		for (uint j = 0; j < 16; j ++) {
 			uint m = input[(parallels * i + parallel_index) * 16 + j];
-			buf[j] = m;//(m >> 24) | ((m >> 8) & 0xff00) | ((m << 8) & 0xff0000) | (m << 24);
+			buf[j] = (m >> 24) | ((m >> 8) & 0xff00) | ((m << 8) & 0xff0000) | (m << 24);
 		}
 		for (uint j = 16; j < 64; j ++) {
 			uint t1 = buf[j - 15];
